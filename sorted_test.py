@@ -1,13 +1,14 @@
 import sorting
 import random
 
-nums = [random.randint(1,100) for x in range(random.randint(1,100))]
+# Generate random test data once to ensure all tests use the same input
+nums = [random.randint(1, 100) for x in range(random.randint(1, 100))]
 
 def test_bubble():
-  assert sorting.bubble(nums) == sorted(nums)
+    assert sorting.bubble(nums.copy()) == sorted(nums), "Bubble sort failed"
 
 def test_selection():
-  assert sorting.bubble(nums) == sorted(nums)
+    assert sorting.selection(nums.copy()) == sorted(nums), "Selection sort failed"
 
 def test_insertion():
-  assert sorting.bubble(nums) == sorted(nums)
+    assert sorting.insertion(nums.copy()) == sorted(nums), "Insertion sort failed"
